@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memoria — Juego de Cartas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>🧠 Memoria</h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Tiempo</span>
+          <span class="stat-value" id="timer">00:00</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Intentos</span>
+          <span class="stat-value" id="moves">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Mejor</span>
+          <span class="stat-value" id="best">--</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="control-group">
+        <label for="theme-select">Tema</label>
+        <select id="theme-select">
+          <option value="animals">🐶 Animales</option>
+          <option value="fruits">🍎 Frutas</option>
+          <option value="space">🚀 Espacio</option>
+          <option value="faces">😀 Caras</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="difficulty-select">Dificultad</label>
+        <select id="difficulty-select">
+          <option value="4x4">Fácil (4×4)</option>
+          <option value="4x6" selected>Media (4×6)</option>
+          <option value="6x6">Difícil (6×6)</option>
+        </select>
+      </div>
+      <button id="restart-btn">🔄 Nueva partida</button>
+    </section>
+
+    <main id="board" class="board"></main>
+
+    <div id="win-overlay" class="overlay hidden">
+      <div class="win-card">
+        <h2>🎉 ¡Ganaste!</h2>
+        <p id="win-summary"></p>
+        <button id="play-again-btn">Jugar de nuevo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
